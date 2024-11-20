@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #005f73;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1,
+.logo h3 {
+    color: #fff;
+    margin: 0;
+}
+
+.logo h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo h3 {
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+ul li {
+    position: relative;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    padding: 8px 12px;
+    display: block;
+}
+
+ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Dropdown Menu Styling */
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #004d61;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show dropdown on hover */
+ul li:hover .sub-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-menu li a {
+    font-size: 16px;
+    padding: 8px 16px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sub-menu li a:hover {
+    background-color: #003d4c;
+}
+
+/* Style umum untuk form about us */
+.kolom-utama {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.kolom-utama h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-menu form, .add-members form {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-menu label, .add-members label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+.add-menu input[type="text"],
+.add-menu textarea,
+.add-menu input[type="email"],
+.add-members input[type="text"],
+.add-members textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 14px;
+}
+
+.add-menu button, .add-members button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.add-menu button:hover, .add-members button:hover {
+    background-color: #2980b9;
+}
+
+.read {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.read-about {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.about-item ol {
+    list-style: none;
+    padding: 0;
+}
+
+.about-item ol li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.about-item ol li strong {
+    color: #333;
+    font-weight: bold;
+}
+
+.about-item ol li p {
+    color: #555;
+    margin: 5px 0;
+}
+
+.about-actions {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #2980b9;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    margin-left: 10px;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+.about-item img {
+    max-width: 120px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav.menu-utama .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.menu-utama ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav.menu-utama ul li {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .add-menu, .read-menu {
+        width: 95%;
+    }
+}

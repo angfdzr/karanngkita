@@ -1,0 +1,421 @@
+/* Reset dan Styling Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Gaya Navigasi Umum */
+nav.menu-utama {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+nav.menu-utama .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.menu-utama .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav.menu-utama .logo img {
+    margin-right: 10px;
+}
+
+nav.menu-utama .logo h1 {
+    color: #54a6ff;
+    font-size: 24px;
+}
+
+nav.menu-utama ul {
+    list-style: none;
+    display: flex;
+}
+
+nav.menu-utama ul li {
+    position: relative;
+}
+
+nav.menu-utama ul li a {
+    color: #54a6ff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav.menu-utama ul li a:hover,
+nav.menu-utama ul li a:focus {
+    background-color: #eef0f1;
+    color: #000;
+    border-radius: 20px;
+}
+
+/* Efek untuk Menu Aktif */
+nav.menu-utama ul li.active a {
+    background-color: #54a6ff;
+    color: #fff;
+    border-radius: 20px;
+}
+
+/* Sub-Menu Styling */
+nav.menu-utama ul li ul.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #eef0f1;
+    border-radius: 10px;
+    display: none;
+    min-width: 140px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+nav.menu-utama ul li:hover ul.sub-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav.menu-utama ul li ul.sub-menu li a {
+    padding: 10px 15px;
+    color: #333;
+}
+
+/* Sub-Menu Hover Effect */
+nav.menu-utama ul li ul.sub-menu li a:hover {
+    background-color: #ccc;
+    color: #000;
+    border-radius: 8px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    nav.menu-utama .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.menu-utama ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.menu-utama ul li {
+        width: 100%;
+    }
+
+    nav.menu-utama ul li a {
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.bg-header{
+    background-image: url(../img/profil.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh; /* Sesuaikan tinggi sesuai kebutuhan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    image-rendering: auto;
+  }
+
+  .bg-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay hitam semi-transparan */
+    z-index: 1;
+}
+
+.bg-header h1{
+    z-index: 2;
+    color: white;
+    font-size: 40px;
+}
+
+.kolom-profil {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.kolom-profil table {
+    width: 100%;
+}
+
+.kolom-profil th {
+    text-align: left;
+    padding-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.kolom-profil td {
+    padding-bottom: 10px;
+}
+
+.kolom-profil input[type="text"],
+.kolom-profil input[type="number"],
+.kolom-profil select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.kolom-profil input[type="text"]:focus,
+.kolom-profil input[type="number"]:focus,
+.kolom-profil select:focus {
+    border-color: #007bff;
+}
+
+.edit-btn-profil,
+.hapus-profil {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn-profil {
+    background-color: #007bff;
+}
+
+.edit-btn-profil:hover {
+    background-color: #0056b3;
+}
+
+.hapus-profil {
+    background-color: #dc3545;
+}
+
+.hapus-profil:hover {
+    background-color: #b52a38;
+}
+
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-column {
+    flex: 1 1 250px;
+    padding: 20px;
+}
+
+#kolom-2{
+    position: relative;
+    left: 30px;
+}
+
+#kolom-3{
+    position: relative;
+    left: 50px;
+}
+
+.container-bottom{
+    text-align: center;
+}
+
+.footer-column h3 {
+    font-size: 24px; /* Ukuran font untuk judul */
+    margin-bottom: 15px; /* Jarak bawah judul */
+}
+
+.footer-column form {
+    color: black;
+    background-color: #f9f9f9; /* Latar belakang formulir */
+    padding: 10px; /* Padding dalam formulir */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+.footer-column label {
+    display: block; /* Menampilkan label dalam baris terpisah */
+    margin-bottom: 15px; /* Jarak bawah label */
+    font-weight: bold; /* Membuat label lebih menonjol */
+}
+
+.footer-column input[type="text"],
+.footer-column input[type="email"],
+.footer-column textarea {
+    width: 100%; /* Lebar penuh */
+    padding: 10px; /* Padding dalam input */
+    margin-bottom: 5px; /* Jarak bawah input */
+    border: 1px solid #ccc; /* Batas abu-abu */
+    border-radius: 4px; /* Sudut membulat */
+    font-size: 16px; /* Ukuran font */
+}
+
+.footer-column button[type="submit"], [type="button"] {
+    background-color: #28a745; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    padding: 10px 15px; /* Padding dalam tombol */
+    border: none; /* Menghilangkan batas */
+    border-radius: 4px; /* Sudut membulat */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    font-size: 16px; /* Ukuran font */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  button[type="button"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #0056b3;
+  }
+
+
+.footer-column input[type="submit"]:hover {
+    background-color: #218838; /* Warna tombol saat hover */
+}
+
+.footer-column input[type="button"] {
+    background-color: #28a745; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    padding: 10px 15px; /* Padding dalam tombol */
+    border: none; /* Menghilangkan batas */
+    border-radius: 4px; /* Sudut membulat */
+    cursor: pointer; /* Mengubah kursor saat hover */
+    font-size: 16px; /* Ukuran font */
+}
+
+.footer-column input[type="button"]:hover {
+    background-color: #218838; /* Warna tombol saat hover */
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-size: 20px;
+}
+
+footer .social-icons a:hover {
+    color: #f39c12;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsif styling */
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-column {
+        padding: 10px 20px;
+    }
+
+    footer .social-icons a {
+        font-size: 20px;
+    }
+}
